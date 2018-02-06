@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -59,7 +59,7 @@
 <script>
     Vue.config.delimiters = ['[[', ']]']
 
-    ws = new WebSocket("ws://localhost:9978");
+    ws = new WebSocket("ws://192.168.1.14:9978"); // 网络内以ip地址访问时，这里需要做对应的修改
     ws.onmessage = function(evt) {
         console.log(evt.data);
         obj = JSON.parse(evt.data)

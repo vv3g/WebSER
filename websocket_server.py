@@ -117,7 +117,11 @@ class WebsocketServer(ThreadingMixIn, TCPServer, API):
     clients = []
     id_counter = 0
 
-    def __init__(self, port, host='127.0.0.1', loglevel=logging.WARNING):
+    """
+    网络上以ip地址访问，这里需要做对应的修改
+    
+    """
+    def __init__(self, port, host='0.0.0.0', loglevel=logging.WARNING): 
         logger.setLevel(loglevel)
         self.port = port
         TCPServer.__init__(self, (host, port), WebSocketHandler)

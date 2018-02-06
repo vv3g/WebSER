@@ -1,4 +1,8 @@
-#! C:\Python36\python.exe
+'''
+这个位置要根据自己python开发环境的安装进行更改
+
+'''
+#! C:\Users\Administrator\AppData\Local\Programs\Python\Python35-32\python.exe
 #coding: utf-8
 ''' 更改记录
 '''
@@ -95,5 +99,5 @@ class SerialServer(object):
 
 if __name__ == '__main__':
     ser = SerialServer(websocket_server_port=9978)
-    
-    run(host='localhost', port='8080', debug=True, reloader=True)
+    #实现网络上ip地址访问，这个地方需要用ip地址的方式
+    run(host='192.168.1.14', port='8080', debug=True, reloader=True) 
